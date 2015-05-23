@@ -17,14 +17,15 @@ public class Circle{
     public Circle(int[][] coordinates){
         int l = coordinates.length;
         if (l != 2) return;
+        pointStorage = new Point[l];
         for (int i = 0; i<l; i++){
-            this.pointStorage[i] = new Point(coordinates[i][0],coordinates[i][1]);
+            pointStorage[i] = new Point(coordinates[i][0],coordinates[i][1]);
         }
     }
     
     private void countRadius(){
-        radius = Math.sqrt(Math.pow((this.pointStorage[0].x-this.pointStorage[1].x), 2)
-                +Math.pow((this.pointStorage[0].y-this.pointStorage[1].y), 2));
+        radius = Math.sqrt(Math.pow((pointStorage[0].x-pointStorage[1].x), 2)
+                +Math.pow((pointStorage[0].y-pointStorage[1].y), 2));
     }
     
     private double countSquare(){
@@ -37,7 +38,7 @@ public class Circle{
     }
     
     public String getSquareAndPerimeter(){
-        return "The square is: " + this.countSquare() 
-                + "\n the perimeter is: " + this.countPerimeter();
+        return "The square is: " + countSquare() 
+                + "\nthe perimeter is: " + countPerimeter();
     }
 }

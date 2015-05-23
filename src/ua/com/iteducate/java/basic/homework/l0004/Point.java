@@ -17,7 +17,7 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public int[] getCoord(){
+    public int[] getCoord(){//private case
         return new int[]{this.x, this.y};
     }
 }

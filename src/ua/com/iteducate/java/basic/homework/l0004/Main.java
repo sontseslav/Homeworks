@@ -27,9 +27,9 @@ public class Main {
         int y3 = scan.nextInt();
         int x4 = scan.nextInt();
         int y4 = scan.nextInt();
-        rectangle1 = new Rectangle(new int[][]{{x1,y1},{x2,y2},{x3,y3},{x4,y4}});
-        System.out.println("Results");
-        rectangle1.getSquareAndPerimeter();
+        rectangle1 = new Rectangle(new int[][]{{2,1},{2,2},{4,2},{4,1}});
+        System.out.println("Recrangle");
+        System.out.println(rectangle1.getSquareAndPerimeter());
         System.out.println("Enter triangle coordinates (3 points):");
         x1 = scan.nextInt();
         y1 = scan.nextInt();
@@ -37,17 +37,17 @@ public class Main {
         y2 = scan.nextInt();
         x3 = scan.nextInt();
         y3 = scan.nextInt();
-        triangle1 = new Triangle(new int[][]{{x1,y1},{x2,y2},{x3,y3}});
-        System.out.println("Results");
-        triangle1.getSquareAndPerimeter();
+        triangle1 = new Triangle(new int[][]{{1,1},{2,4},{4,3}});
+        System.out.println("Triangle");
+        System.out.println(triangle1.getSquareAndPerimeter());
         System.out.println("Enter circle coordinates (2 points):");
         x1 = scan.nextInt();
         y1 = scan.nextInt();
         x2 = scan.nextInt();
         y2 = scan.nextInt();
-        circle1 = new Circle(new int[][]{{x1,y1},{x2,y2}});
-        System.out.println("Results");
-        circle1.getSquareAndPerimeter();
+        circle1 = new Circle(new int[][]{{5,5},{0,5}});
+        System.out.println("Circle");
+        System.out.println(circle1.getSquareAndPerimeter());
         scan.close();
     }
 }

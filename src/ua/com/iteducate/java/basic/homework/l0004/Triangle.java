@@ -16,31 +16,37 @@ public class Triangle{
     
     public Triangle(int[][] coordinates){
         int l = coordinates.length;
+        pointStorage = new Point[l];
         if (l != 3) return;
         for (int i = 0; i<l; i++){
-            this.pointStorage[i] = new Point(coordinates[i][0],coordinates[i][1]);
+            pointStorage[i] = new Point(coordinates[i][0],coordinates[i][1]);
         }
     }
     
     private void countSides(){
-        for (int i = 1; i<pointStorage.length; i++){
-            sides[i-1] = Math.sqrt(Math.pow((this.pointStorage[i-1].x-this.pointStorage[i].x), 2)
-                    +Math.pow((this.pointStorage[i-1].y-this.pointStorage[i].y), 2));
+        sides = new double[3];
+        for (int i = 0; i<2; i++){
+            sides[i] = Math.sqrt(Math.pow((pointStorage[i].x-pointStorage[i+1].x), 2)
+                    +Math.pow((pointStorage[i].y-pointStorage[i+1].y), 2));
         }
+        sides[2] = Math.sqrt(Math.pow((pointStorage[0].x-pointStorage[2].x), 2)
+                    +Math.pow((pointStorage[0].y-pointStorage[2].y), 2));
+        
     }
     
     private double countSquare(){
-        this.countSides();
+        
         double p = countPerimeter();
         return Math.sqrt(p*(p-sides[0])*(p-sides[1])*(p-sides[2]));
     }
     
     private double countPerimeter(){
-        return this.sides[0]+this.sides[1]+this.sides[3];
+        return sides[0]+sides[1]+sides[2];
     }
     
     public String getSquareAndPerimeter(){
-        return "The square is: " + this.countSquare() 
-                + "\n the perimeter is: " + this.countPerimeter();
+        countSides();
+        return "The square is: " + countSquare() 
+                + "\nthe perimeter is: " + countPerimeter();
     }
 }
