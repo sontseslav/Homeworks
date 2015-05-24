@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ua.com.iteducate.java.basic.homework.l0004;
+package ua.com.iteducate.java.basic.homework.l0004.shapes;
 
 import java.util.Scanner;
 
