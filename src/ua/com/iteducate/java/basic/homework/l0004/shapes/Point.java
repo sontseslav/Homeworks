@@ -18,6 +18,6 @@ public class Point {
         this.y = y;
     }
     public int[] getCoord(){//private case
-        return new int[]{this.x, this.y};
+        return new int[]{x, y};
     }
 }

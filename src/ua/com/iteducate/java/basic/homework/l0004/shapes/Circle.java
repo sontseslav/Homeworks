@@ -11,7 +11,7 @@ package ua.com.iteducate.java.basic.homework.l0004.shapes;
  */
 public class Circle{
     private double radius;
-    private Point[] pointStorage;// 1 point
+    private Point[] pointStorage;// 2 points
     
     
     public Circle(int[][] coordinates){

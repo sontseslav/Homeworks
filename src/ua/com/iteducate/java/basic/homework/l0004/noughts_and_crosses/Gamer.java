@@ -23,7 +23,7 @@ public class Gamer {
     
     public void takeTurn(){//g - player
 	do{
-            System.out.println("player_"+player);
+            System.out.println("player: "+player);
             t = scan.nextInt();	
 	}while(t < 0 || t>8 ||instance.getPole()[t] != ' ');
 	instance.setPole(t, player);

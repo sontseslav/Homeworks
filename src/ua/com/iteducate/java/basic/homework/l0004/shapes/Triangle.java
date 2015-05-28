@@ -10,6 +10,7 @@ package ua.com.iteducate.java.basic.homework.l0004.shapes;
  * @author user
  */
 public class Triangle{
+    private double p;
     private double[] sides;
     private Point[] pointStorage;// 3 points
     
@@ -36,7 +37,7 @@ public class Triangle{
     
     private double countSquare(){
         
-        double p = countPerimeter();
+        p = countPerimeter();
         return Math.sqrt(p*(p-sides[0])*(p-sides[1])*(p-sides[2]));
     }
     
@@ -47,6 +48,6 @@ public class Triangle{
     public String getSquareAndPerimeter(){
         countSides();
         return "The square is: " + countSquare() 
-                + "\nthe perimeter is: " + countPerimeter();
+                + "\nthe perimeter is: " + p;
     }
 }
