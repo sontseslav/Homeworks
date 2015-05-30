@@ -39,10 +39,4 @@ public class Rectangle extends Shape{
     protected double countPerimeter(){
         return 2*(sides[0]+sides[1]);
     }
-    @Override
-    public String getSquareAndPerimeter(){
-        countSides();
-        return "The square is: " + countSquare() 
-                + "\nthe perimeter is: " + countPerimeter();
-    }
 }

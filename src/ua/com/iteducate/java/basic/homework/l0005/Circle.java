@@ -27,16 +27,11 @@ public class Circle extends Shape{
     }
     @Override
     protected double countSquare(){
-        this.countSides();
+        
         return Math.PI*radius*radius;
     }
     @Override
     protected double countPerimeter(){
         return 2*radius*Math.PI;
-    }
-    @Override
-    public String getSquareAndPerimeter(){
-        return "The square is: " + countSquare() 
-                + "\nthe perimeter is: " + countPerimeter();
     }
 }

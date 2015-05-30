@@ -43,7 +43,7 @@ public class Triangle extends Shape{
         return sides[0]+sides[1]+sides[2];
     }
     @Override
-    public String getSquareAndPerimeter(){
+    protected String getSquareAndPerimeter(){
         countSides();
         return "The square is: " + countSquare() 
                 + "\nthe perimeter is: " + p;

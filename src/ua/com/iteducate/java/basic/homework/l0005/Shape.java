@@ -18,5 +18,9 @@ public abstract class Shape {
     
     protected abstract double countPerimeter();
     
-    protected abstract String getSquareAndPerimeter();
+    protected String getSquareAndPerimeter(){
+        countSides();
+        return "The square is: " + countSquare() 
+                + "\nthe perimeter is: " + countPerimeter();
+    }
 }
