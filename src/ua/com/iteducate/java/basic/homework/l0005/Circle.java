@@ -1,4 +1,4 @@
-/*test test test
+/*test transmit
  */
 package ua.com.iteducate.java.basic.homework.l0005;
 
