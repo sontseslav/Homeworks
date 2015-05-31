@@ -1,4 +1,4 @@
-/*hjjgfhhdhdghdghsgbsgdfgfahgjsjs
+/*test test test
  */
 package ua.com.iteducate.java.basic.homework.l0005;
 
