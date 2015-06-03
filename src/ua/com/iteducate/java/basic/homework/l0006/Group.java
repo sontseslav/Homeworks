@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author user
  */
 public class Group {
-    private final int studQuantity = 3;
+    private final int studQuantity = 12;
     private Student[] studInGroup;
     
     protected Group(){
