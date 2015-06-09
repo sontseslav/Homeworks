@@ -26,7 +26,7 @@ public class Triangle extends Shape{
 
     @Override
     protected double perimeter(){
-        perim = sides[0]+sides[1]+sides[3];
+        perim = sides[0]+sides[1]+sides[2];
         return perim;
     }
     
