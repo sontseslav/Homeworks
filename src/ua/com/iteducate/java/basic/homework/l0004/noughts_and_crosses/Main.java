@@ -5,8 +5,6 @@
  */
 package ua.com.iteducate.java.basic.homework.l0004.noughts_and_crosses;
 
-import java.lang.reflect.Field;
-
 /**
  *
  * @author user
