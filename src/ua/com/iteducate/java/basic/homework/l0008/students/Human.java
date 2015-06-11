@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ua.com.iteducate.java.basic.homework.l0006;
+package ua.com.iteducate.java.basic.homework.l0008.students;
 
 /**
  *
