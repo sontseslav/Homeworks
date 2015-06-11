@@ -31,6 +31,7 @@ public class Robot {
                 break;
             }
             shapeFromStorage.draw();
+            System.out.println(shapeFromStorage);
         }
     }
 }

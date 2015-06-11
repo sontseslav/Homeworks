@@ -27,24 +27,26 @@ public class Main {
         figuresQuant = scan.nextInt();
         shapeStorage = new Shape[figuresQuant];
         for(int i = 0; i<figuresQuant; i++){
-            System.out.printf("Chose type of figure: (%s)%n"+Arrays.toString(Shapes.values()));
+            System.out.println("Chose type of figure: "+Arrays.toString(Shapes.values()));
             switch (Shapes.valueOf(scan.next())){
                 case circle:
-                    System.out.printf("Enter coordinates of %s:"+Shapes.circle);
+                    System.out.println("Enter coordinates of "+Shapes.circle+":");
                     Shape circle = new Circle(new int[][]{{scan.nextInt(),
                         scan.nextInt()},{scan.nextInt(),scan.nextInt()}});
                     shapeStorage[i] = circle;
                     break;
                 case triangle:
-                    System.out.printf("Enter coordinates of %s:"+Shapes.circle);
+                    System.out.println("Enter coordinates of "+Shapes.triangle+":");
                     Shape triangle = new Triangle(new int[][]{{scan.nextInt(),
-                        scan.nextInt()},{scan.nextInt(),scan.nextInt()}});
+                        scan.nextInt()},{scan.nextInt(),scan.nextInt()},
+                        {scan.nextInt(),scan.nextInt()}});
                     shapeStorage[i] = triangle;
                     break;
                 case rectangle:
-                    System.out.printf("Enter coordinates of %s:"+Shapes.circle);
+                    System.out.println("Enter coordinates of "+Shapes.rectangle+":");
                     Shape rectangle = new Rectangle(new int[][]{{scan.nextInt(),
-                        scan.nextInt()},{scan.nextInt(),scan.nextInt()}});
+                        scan.nextInt()},{scan.nextInt(),scan.nextInt()},{scan.nextInt(),
+                        	scan.nextInt()},{scan.nextInt(),scan.nextInt()}});
                     shapeStorage[i] = rectangle;
                     break;
             }
