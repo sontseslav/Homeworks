@@ -28,6 +28,6 @@ public class HumanRunner {
         mzd.laizyFillGroup();
         //System.out.printf("Found student with surname %s %n"
         //        +mzd.findStud("Ivanenko")+"\n","Ivanenko");
-        
+        mzd.sortAverageMark();
     }
 }

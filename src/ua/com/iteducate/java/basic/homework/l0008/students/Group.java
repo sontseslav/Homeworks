@@ -5,6 +5,7 @@
  */
 package ua.com.iteducate.java.basic.homework.l0008.students;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ import java.util.Scanner;
  *
  * @author user
  */
-public class Group implements Comparable{
+public class Group{
     private final int studQuantity = 12;
     private Student[] studInGroup;
     
@@ -54,10 +55,12 @@ public class Group implements Comparable{
         }
         return null;
     }
+    
+    protected void sortAverageMark() {
+		Arrays.sort(studInGroup, new StudComparator());
+		for (Student stud : studInGroup){
+			System.out.println(stud);
+		}
+	}
 
-    @Override
-    public int compareTo(Object t) {
-        Student stud = (Student)t;
-        if (this.getAverageMark() > stud.getAverageMark())
-    }
 }

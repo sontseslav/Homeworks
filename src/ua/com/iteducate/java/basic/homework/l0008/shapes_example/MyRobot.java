@@ -1,6 +1,6 @@
 package ua.com.iteducate.java.basic.homework.l0008.shapes_example;
 
-import sun.security.provider.SHA;
+//import sun.security.provider.SHA;
 
 /**
  * Created by Java Base on 04.06.2015.
