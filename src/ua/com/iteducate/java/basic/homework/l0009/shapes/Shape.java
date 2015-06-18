@@ -9,20 +9,20 @@ public abstract class Shape implements Comparable{
 
         @Override
         public int compareTo(Object t) {
-            /*Shape shape = (Shape) t;
+            Shape shape = (Shape) t;
             if (this.calcS() > shape.calcS()) {
                 return 1;
             } else if (this.calcS() < shape.calcS()) {
                 return -1;
-            }*/
+            }
             return 0;
         }
         
-        /*@Override
+        @Override
         public String toString(){
             return String.format("Shape of %s: it's square is %.4f, perimeter - %.2f", 
                     this.getClass().getSimpleName(), this.calcS(), this.calcPerim());
-        }*/
+        }
         
 	private enum Shapes {Circle, Triangle, Rectangle};
 	
@@ -47,13 +47,13 @@ class PerimComparator implements Comparator{
 
     @Override
     public int compare(Object t, Object t1) {
-        /*Shape shape1 = (Shape)t;
+        Shape shape1 = (Shape)t;
         Shape shape2 = (Shape)t1;
         if (shape1.calcPerim() > shape2.calcPerim()){
             return 1;
         }else if (shape1.calcPerim() < shape2.calcPerim()){
             return -1;
-        }*/
+        }
         return 0;
     }
 
