@@ -1,5 +1,6 @@
 package ua.com.iteducate.java.basic.homework.l0009.stud;
 
+
 public class Group {
 	private Student[] group;
 	private int n;
