@@ -11,9 +11,8 @@ package ua.com.iteducate.java.basic.homework.l0010.itcompany;
  */
 public class BA extends Employee{
 
-    public BA(String name, String surname, int stage, double salary, 
-            double halfYearMark) {
-        super(name, surname, stage, salary, halfYearMark);
+    public BA() {
+        
     }
 
     @Override
