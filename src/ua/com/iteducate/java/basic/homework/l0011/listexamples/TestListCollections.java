@@ -73,7 +73,6 @@ public class TestListCollections {
         TestListCollections tlc = new TestListCollections();
         TestListCollections.TestALists tal = tlc.new TestALists(str, mycount);
         TestListCollections.TestLList tll = tlc.new TestLList(str, mycount);
-        //tlc.getItems(tal.aList, 0);
         System.out.println("Testing element "+str);
         System.out.println("----------------------------------------------------");
         System.out.println("GET method:");
