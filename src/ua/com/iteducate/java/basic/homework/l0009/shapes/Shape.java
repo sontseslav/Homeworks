@@ -7,7 +7,7 @@ import java.util.Comparator;
 public abstract class Shape implements Comparable{
 	protected Point[] points;
 
-        @Override
+        /*@Override
         public int compareTo(Object t) {
             Shape shape = (Shape) t;
             if (this.calcS() > shape.calcS()) {
@@ -16,7 +16,7 @@ public abstract class Shape implements Comparable{
                 return -1;
             }
             return 0;
-        }
+        }*/
         
         @Override
         public String toString(){
@@ -45,7 +45,7 @@ public abstract class Shape implements Comparable{
 
 class PerimComparator implements Comparator{
 
-    @Override
+    /*@Override
     public int compare(Object t, Object t1) {
         Shape shape1 = (Shape)t;
         Shape shape2 = (Shape)t1;
@@ -55,6 +55,6 @@ class PerimComparator implements Comparator{
             return -1;
         }
         return 0;
-    }
+    }*/
 
 }
