@@ -31,6 +31,8 @@ public class Employee  {
         this.salary = salary;
         this.halfYearMark = halfYearMark;
     }
+    
+    public Employee(){};
 
     public String getProjectList() {
         StringBuilder sb = new StringBuilder();
@@ -47,11 +49,6 @@ public class Employee  {
     
     public int getProjectInvolvement(){
         return this.projectList.size();
-    }
-    
-    public static <T extends Employee> T createEmployee(String name, 
-            String surname, int stage, double salary, double halfYearMark){
-        return (T) new Employee(name, surname, stage, salary, halfYearMark);
     }
     
     public double calcIncome(){
