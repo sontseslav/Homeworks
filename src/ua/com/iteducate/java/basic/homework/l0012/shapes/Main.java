@@ -17,11 +17,11 @@ public class Main {
                     try {
                         rb.addShapes(scan.next());
                         System.out.println("More shapes? y/n");
-                        isMoreShapes = (scan.next().equalsIgnoreCase("y"))? true : false;
+                        isMoreShapes = (scan.next().equalsIgnoreCase("y"));
                     } catch (IdenticalPointsException ex) {
                         System.out.println(ex.getMessage());
                     }
-                };
+                }
 		scan.close();
 		System.out.println(rb.calsSumS());
 		

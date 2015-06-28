@@ -2,10 +2,12 @@ package ua.com.iteducate.java.basic.homework.l0012.shapes;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+
 
 public class Robot {
-	private ArrayList<Shape> shapes = new ArrayList<>();
+	private HashSet<Shape> shapes = new HashSet<>();
 	private int n = 0;
 	
 	public Robot() {
@@ -21,15 +23,18 @@ public class Robot {
 	
 	public double calsSumS(){
 		double sum = 0;
-		for(int i = 0;i<n;i++){
-			sum += this.shapes.get(i).calcS();
-		}
+            //for(int i = 0;i<n;i++){
+            for (Shape shape : shapes) {
+                sum += shape.calcS();
+            }
+		//}
 		return sum;
 	}
         
         public void sortShapesSquare(){
             if (n > 0){
-                Collections.sort(shapes);
+                List shapesToSort = new ArrayList(shapes);
+                Collections.sort(shapesToSort);
                 for (Shape s:shapes){
                     System.out.println(s);
                 }
@@ -38,7 +43,8 @@ public class Robot {
         
         public void sortShapesPerim(){
             if (n > 0){
-                Collections.sort(shapes, new PerimComparator());
+                List shapesToSort = new ArrayList(shapes);
+                Collections.sort(shapesToSort, new PerimComparator());
                 for (Shape s:shapes){
                     System.out.println(s);
                 }

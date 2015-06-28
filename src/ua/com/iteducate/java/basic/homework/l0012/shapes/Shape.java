@@ -1,5 +1,6 @@
 package ua.com.iteducate.java.basic.homework.l0012.shapes;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 public abstract class Shape implements Comparable{
@@ -20,6 +21,50 @@ public abstract class Shape implements Comparable{
         public String toString(){
             return String.format("Shape of %s: it's square is %.4f, perimeter - %.2f", 
                     this.getClass().getSimpleName(), this.calcS(), this.calcPerim());
+        }
+        
+        @Override
+        public int hashCode(){
+            final int prime = 29;
+            int result = 1;
+            for (int i = 0; i < points.length; i++){
+                result = prime*result + points[i].getX() + points[i].getY();
+            }
+            //long dummy = Double.doubleToLongBits(this.calcS());
+            //result = prime*result + (int)(dummy - (dummy >>> 32));
+            //dummy = Double.doubleToLongBits(this.calcPerim());
+            //result = prime*result + (int)(dummy - (dummy >>> 32));
+            //return (result >= 2147483647) ? (int)(result - (result >>> 32)) : result;
+            return result;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj){
+                return true;
+            }
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final Shape other = (Shape) obj;
+            //if (Arrays.deepEquals(this.points, other.points) //deepEquals do not works
+                    //&& this.calcPerim() == other.calcPerim()
+                    //&& this.calcS() == other.calcS()
+            //        ){
+            if (this.points.length != other.points.length){
+                return false;
+            }
+            boolean ret = true;
+            for (int i = 0;i<this.points.length;i++){
+                if (this.points[i].getX() != other.points[i].getX() 
+                        || this.points[i].getY() != other.points[i].getY()){
+                    ret = false;
+                }
+            }    
+            return ret;
         }
         
 	private enum Shapes {Circle, Triangle, Rectangle};
