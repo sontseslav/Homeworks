@@ -61,7 +61,7 @@ public class TestHashtables {
     
     public static void main(String[] args) {
         String str = "MyStr";
-        int mycount = 10000;
+        int mycount = 30000;
         int mycountGet = 100;
         TestHashtables tht = new TestHashtables();
         long tStart = System.currentTimeMillis();
@@ -102,30 +102,30 @@ public class TestHashtables {
         System.out.println("----------------------------------------------------");
         System.out.println("SET method:");
         System.out.println("----------------------------------------------------");
-        System.out.println("Setting one first item from myHashMap: "
+        System.out.println("Setting one first item to myHashMap: "
                 +testMy.setItems(testMy.myHashMap, 0, 1));
-        System.out.println("Setting one first item from native hashMap: "
+        System.out.println("Setting one first item to native hashMap: "
                 +test.setItems(test.hashMap, 0, 1));
-        System.out.println("Setting one middle item from myHashMap: "
+        System.out.println("Setting one middle item to myHashMap: "
                 +testMy.setItems(testMy.myHashMap, mycount/2, 1));
-        System.out.println("Setting one middle item from native hashMap: "
+        System.out.println("Setting one middle item to native hashMap: "
                 +test.setItems(test.hashMap, mycount/2, 1));
-        System.out.println("Setting one last item from myHashMap: "
+        System.out.println("Setting one last item to myHashMap: "
                 +testMy.setItems(testMy.myHashMap, mycount-1, 1));
-        System.out.println("Setting one last item from native hashMap: "
+        System.out.println("Setting one last item to native hashMap: "
                 +test.setItems(test.hashMap, mycount-1, 1));
         System.out.println("----------------------------------------------------");
-        System.out.printf("Setting %s first items from myHashMap: %s%n"
+        System.out.printf("Setting %s first items to myHashMap: %s%n"
                 ,mycountGet,testMy.setItems(testMy.myHashMap, 0, mycountGet));
-        System.out.printf("Setting %s first items from native hashMap: %s%n"
+        System.out.printf("Setting %s first items to native hashMap: %s%n"
                 ,mycountGet,test.setItems(test.hashMap, 0, mycountGet));
-        System.out.printf("Setting %s middle items from myHashMap: %s%n"
+        System.out.printf("Setting %s middle items to myHashMap: %s%n"
                 ,mycountGet,testMy.setItems(testMy.myHashMap, mycount/2, mycountGet));
-        System.out.printf("Setting %s middle items from native hashMap: %s%n"
+        System.out.printf("Setting %s middle items to native hashMap: %s%n"
                 ,mycountGet,test.setItems(test.hashMap, mycount/2, mycountGet));
-        System.out.printf("Setting %s last items from myHashMap: %s%n"
+        System.out.printf("Setting %s last items to myHashMap: %s%n"
                 ,mycountGet,testMy.setItems(testMy.myHashMap, mycount-1-mycountGet, mycountGet));
-        System.out.printf("Setting %s last items from native hashMap: %s%n"
+        System.out.printf("Setting %s last items to native hashMap: %s%n"
                 ,mycountGet,test.setItems(test.hashMap, mycount-1-mycountGet, mycountGet));
         
     }

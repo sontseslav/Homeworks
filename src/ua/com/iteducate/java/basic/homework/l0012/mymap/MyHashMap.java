@@ -40,7 +40,7 @@ public class MyHashMap<K, V> extends AbstractMap<K,V> implements Map<K, V> {
             long s = (long) ((Math.sqrt(5)-1)/2*Math.pow(2, w));
             long y = (long) ((keyInt*s)%(Math.pow(2, w)));
             int hash = (int)(y >> (w-p));
-            hash &= size - 1; //size must = w!
+            //hash &= size - 1; //size must = w!
             return hash;
     }
 
