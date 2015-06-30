@@ -46,6 +46,26 @@ public class Student extends Human{
         }
     }
     
+    protected int myHashCode(Student stud){
+    	final int prime = 31;
+    	int result = 1;
+    	result = prime*result + stud.name.hashCode();
+    	result = prime*result + stud.surname.hashCode();
+    	result = prime*result + stud.year;
+		return 0;
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+    	if (this == obj) return true;
+    	if (obj == null) return false;
+    	if (getClass() != obj.getClass()) return false;
+    	Student other = (Student) obj;
+    	if (this.myHashCode(this) != other.myHashCode(other)) return false;
+    	if (this.surname == other.surname && this.name == other.name 
+    			&& this.year == other.year) return true;
+    	return false;
+    }
     
 }
 
