@@ -40,4 +40,10 @@ public class Rectangle extends Shape{
             if (perim == 0) throw new ZeroDistanceException();
             return perim;
         }
+
+		@Override
+		public int compareTo(Object o) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
 }

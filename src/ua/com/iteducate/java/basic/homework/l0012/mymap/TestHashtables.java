@@ -61,7 +61,7 @@ public class TestHashtables {
     
     public static void main(String[] args) {
         String str = "MyStr";
-        int mycount = 30000;
+        int mycount = 10000;
         int mycountGet = 100;
         TestHashtables tht = new TestHashtables();
         long tStart = System.currentTimeMillis();

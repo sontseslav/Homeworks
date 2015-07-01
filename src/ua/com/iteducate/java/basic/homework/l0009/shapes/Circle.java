@@ -30,4 +30,11 @@ public class Circle extends Shape{
             return 2*Math.PI*Math.pow(points[0].calcDist(points[1]),2);
         }
 
+
+		@Override
+		public int compareTo(Object o) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
 }
