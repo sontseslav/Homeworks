@@ -7,21 +7,31 @@ import java.util.Comparator;
 public abstract class Shape implements Comparable{
 	protected Point[] points;
 
-        /*@Override
+        @Override
         public int compareTo(Object t) {
             Shape shape = (Shape) t;
-            if (this.calcS() > shape.calcS()) {
+            double a = 0, b = 0;
+            try{
+                a = this.calcS();
+                b = shape.calcS();
+            }catch (ZeroDistanceException ex){}
+            if (a > b){
                 return 1;
-            } else if (this.calcS() < shape.calcS()) {
+            }else if (a < b){
                 return -1;
             }
             return 0;
-        }*/
+        }
         
         @Override
         public String toString(){
+            double a = 0, b = 0;
+            try{
+                a = this.calcS();
+                b = this.calcPerim();
+            }catch (ZeroDistanceException ex){}
             return String.format("Shape of %s: it's square is %.4f, perimeter - %.2f", 
-                    this.getClass().getSimpleName(), this.calcS(), this.calcPerim());
+                    this.getClass().getSimpleName(), a, b);
         }
         
 	private enum Shapes {Circle, Triangle, Rectangle};
@@ -45,16 +55,21 @@ public abstract class Shape implements Comparable{
 
 class PerimComparator implements Comparator{
 
-    /*@Override
+    @Override
     public int compare(Object t, Object t1) {
         Shape shape1 = (Shape)t;
         Shape shape2 = (Shape)t1;
-        if (shape1.calcPerim() > shape2.calcPerim()){
+        double a = 0, b = 0;
+            try{
+                a = shape1.calcS();
+                b = shape2.calcS();
+            }catch (ZeroDistanceException ex){}
+        if (a > b){
             return 1;
-        }else if (shape1.calcPerim() < shape2.calcPerim()){
+        }else if (a < b){
             return -1;
         }
         return 0;
-    }*/
+    }
 
 }
