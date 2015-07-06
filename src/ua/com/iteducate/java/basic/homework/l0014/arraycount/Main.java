@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        int n = 30000000;
+        int n = 80000000;
         ArrayToCount atc = new ArrayToCount(n);
         atc.setArray();
         System.out.println("Go!");

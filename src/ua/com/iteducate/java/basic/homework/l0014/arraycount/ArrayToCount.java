@@ -21,7 +21,7 @@ public class ArrayToCount {
     public void setArray(){
         Random rand = new Random();
         for(int i = 0; i < array.length; i++){
-            array[i] = rand.nextInt(1000);
+            array[i] = rand.nextInt(100);
         }
     }
 }
