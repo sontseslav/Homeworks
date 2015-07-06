@@ -13,7 +13,9 @@ public class Runner {
     public static void main(String[] args) {
         SomeObject so = new SomeObject(123);
         Thread2 thread02 = new Thread2(so);
-        Thread1 thread01 = new Thread1(thread02, so);
+        Thread1 thread01 = new Thread1(so);
+        thread01.setPointer(thread02);
+        thread02.setPointer(thread01);
         System.out.println("GO!");
         thread01.start();
         thread02.start();

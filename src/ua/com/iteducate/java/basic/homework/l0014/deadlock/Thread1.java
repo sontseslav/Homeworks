@@ -10,12 +10,15 @@ package ua.com.iteducate.java.basic.homework.l0014.deadlock;
  * @author user
  */
 public class Thread1 extends Thread{
-    private final Thread pointer;
+    private Thread2 pointer = null;
     private final SomeObject so;
 
-    public Thread1(Thread pointer, SomeObject so) {
-        this.pointer = pointer;
+    public Thread1(SomeObject so) {
         this.so = so;
+    }
+
+    public void setPointer(Thread2 pointer) {
+        this.pointer = pointer;
     }
     
     @Override
@@ -31,9 +34,9 @@ public class Thread1 extends Thread{
                 System.out.println("Interrupted");
             }
             System.out.println(getName()+" resumed");
-//            synchronized(this.so){
-//                this.pointer.interrupt();
-//            }
+            synchronized(this.so){
+                this.pointer.interrupt();
+            }
         }
         System.out.println(getName()+" exiting...");
     }
