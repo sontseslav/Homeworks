@@ -16,4 +16,8 @@ public class SomeObject {
         this.a = a;
     }
     
+    @Override
+    public String toString(){
+    	return ""+this.a;
+    }
 }

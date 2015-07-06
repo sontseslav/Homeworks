@@ -10,33 +10,23 @@ package ua.com.iteducate.java.basic.homework.l0014.deadlock;
  * @author user
  */
 public class Thread1 extends Thread{
-    private Thread2 pointer = null;
-    private final SomeObject so;
+    private final SomeObject so1;
+    private final SomeObject so2;
 
-    public Thread1(SomeObject so) {
-        this.so = so;
-    }
-
-    public void setPointer(Thread2 pointer) {
-        this.pointer = pointer;
+    public Thread1(SomeObject so1,SomeObject so2) {
+        this.so1 = so1;
+        this.so2 = so2;
     }
     
     @Override
     public void run(){
-        while(!isInterrupted()){
-            try{
-                System.out.println("wainig");
-                synchronized(this.so){
-                    this.so.wait();
-                    System.out.println("wainig no more");
+    	while(!isInterrupted()){
+        	synchronized(this.so1){
+                System.out.println(getName()+" takes "+so1);
+                synchronized(this.so2){
+                	System.out.println(getName()+" takes "+so2);
                 }
-            }catch (InterruptedException ex){
-                System.out.println("Interrupted");
-            }
-            System.out.println(getName()+" resumed");
-            synchronized(this.so){
-                this.pointer.interrupt();
-            }
+        	}
         }
         System.out.println(getName()+" exiting...");
     }

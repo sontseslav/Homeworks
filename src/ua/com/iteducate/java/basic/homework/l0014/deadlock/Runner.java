@@ -11,21 +11,20 @@ package ua.com.iteducate.java.basic.homework.l0014.deadlock;
  */
 public class Runner {
     public static void main(String[] args) {
-        SomeObject so = new SomeObject(123);
-        Thread2 thread02 = new Thread2(so);
-        Thread1 thread01 = new Thread1(so);
-        thread01.setPointer(thread02);
-        thread02.setPointer(thread01);
+        SomeObject so1 = new SomeObject(123);
+        SomeObject so2 = new SomeObject(321);
+        Thread2 thread02 = new Thread2(so1,so2);
+        Thread1 thread01 = new Thread1(so1,so2);
         System.out.println("GO!");
         thread01.start();
         thread02.start();
-//        System.out.println("Wait just 5 sec...");
-//        try{
-//            Thread.sleep(5000);
-//        }catch (InterruptedException ex){}
-//        System.out.println("Closing threads");
-//        thread01.interrupt();
-//        thread02.interrupt();
+        System.out.println("Wait just 5 sec...");
+        try{
+            Thread.sleep(5000);
+        }catch (InterruptedException ex){}
+        System.out.println("Closing threads");
+        thread01.interrupt();
+        thread02.interrupt();
         System.out.println("Done!");
     }
 }
